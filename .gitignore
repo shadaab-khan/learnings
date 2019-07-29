@@ -1,0 +1,26 @@
+logs
+project/project
+project/target
+target
+tmp
+dist
+.cache
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.DS_Store
+web
+generated-source
+app/generated-source
+dtos
+app/protobuf/build
+com/informis/elastic/proto
+# ignore generated logs zipped files,
+*.gz
+.scannerwork
+module/elastic_search/app/generated-source
+
+*.log
+Run
