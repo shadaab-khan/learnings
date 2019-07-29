@@ -11,4 +11,10 @@ public class ProbabilityTest {
 
         Probability.randomNum();
     }
+
+    @Test
+    public void loop() {
+
+        Probability.loop();
+    }
 }
