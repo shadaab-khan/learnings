@@ -32,28 +32,30 @@ public class Probability {
     private static List randomProb() {
         double rnd = Math.random();
         double rnd2 = Math.random();
-        if(i==10){
+        int size = 15;
+        int per1 = (40*size)/100, per2 = (20*size)/100, per3 = (30*size)/100, per4 = (10*size)/100;
+        if(i==size){
             return list;
         }
-        else if (rnd < 0.4 && cnt1 < 4) {
+        else if (rnd < 0.4 && cnt1 < per1) {
             cnt1++;
             i++;
             num = (int) (1 + 10 * rnd2);
             System.out.println(" 40% Generated Num: " + num);
             list.add(num);
-        } else if (rnd < 0.6 && cnt2 < 2) {
+        } else if (rnd < 0.6 && cnt2 < per2) {
             cnt2++;
             i++;
             num = (int) (11 + 10 * rnd2);
             System.out.println(" 20% Generated Num: " + num);
             list.add(num);
-        } else if (rnd < 0.9 && cnt3 < 3) {
+        } else if (rnd < 0.9 && cnt3 < per3) {
             cnt3++;
             i++;
             num =(int) (21 + 10 * rnd2);
             System.out.println(" 30% Generated Num: " + num);
             list.add(num);
-        } else if (cnt4 < 1) {
+        } else if (cnt4 < per4) {
             cnt4++;
             i++;
             num = (int) (31 + 5 * rnd2);
@@ -66,7 +68,7 @@ public class Probability {
     static void loop() {
 
         List numList = randomProb();
-
+        System.out.println(" Count 40%: " + cnt1 + " Count 20%: " + cnt2 +" Count 30%: " + cnt3 +" Count 10%: " + cnt4);
         System.out.println("List of Nums : " + numList);
     }
 }
