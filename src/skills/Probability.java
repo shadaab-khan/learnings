@@ -32,9 +32,9 @@ public class Probability {
     private static List randomProb() {
         double rnd = Math.random();
         double rnd2 = Math.random();
-        int size = 15;
-        int per1 = (40*size)/100, per2 = (20*size)/100, per3 = (30*size)/100, per4 = (10*size)/100;
-        if(i==size){
+        float size = 12;
+        float per1 = (40*size)/100, per2 = (20*size)/100, per3 = (30*size)/100, per4 = (10*size)/100;
+        if(i==(per1+per2+per3+per4)){
             return list;
         }
         else if (rnd < 0.4 && cnt1 < per1) {
