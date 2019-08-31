@@ -1,4 +1,3 @@
-package skills;
 
 public class ImplRunnable extends ExtendsThread implements Runnable {
 

@@ -1,4 +1,3 @@
-package skills;
 
 public class ExtendsThread extends Thread {
 
