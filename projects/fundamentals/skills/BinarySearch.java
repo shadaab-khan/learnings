@@ -1,4 +1,3 @@
-package skills;
 
 import java.util.Scanner;
 
