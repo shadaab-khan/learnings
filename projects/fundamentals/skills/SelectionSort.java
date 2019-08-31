@@ -1,17 +1,21 @@
-package skills;
 
 import java.util.Scanner;
 
-public class InsertionSort {
+public class SelectionSort {
 
-    private void insertSort(int[] arr) {
-        int i,j,key;
-        for (i = 1; i < arr.length; i++) {
-            key = arr[i];
-            for ( j = i-1; j >= 0 && arr[j]>key; j--) {
-                arr[j+1] = arr[j];
+    void sort(int[] arr){
+        int i, j;
+        int temp;
+        for (i = 0; i < arr.length-1; i++) {
+            int min_index = i;
+            for (j = i+1; j < arr.length; j++) {
+                    if(arr[j]<arr[min_index]){
+                       min_index = j;
+                    }
             }
-            arr[j+1] = key;
+            temp = arr[i];
+            arr[i] = arr[min_index];
+            arr[min_index] = temp;
         }
     }
 
@@ -25,7 +29,7 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        int i,n;
+        int n, i;
         System.out.println("Enter the length of the array");
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
@@ -34,9 +38,9 @@ public class InsertionSort {
         for (i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
-        InsertionSort insertionSort = new InsertionSort();
-        insertionSort.insertSort(arr);
+        SelectionSort ob = new SelectionSort();
+        ob.sort(arr);
         System.out.println("Sorted Array is :");
-        insertionSort.printArray(arr);
+        ob.printArray(arr);
     }
 }
