@@ -45,6 +45,11 @@ public class MyHashMap extends HashMap {
 //        e2.setName("Jon");
 
         m1.put(e1, e1.slno +", "+ e1.name);
+
+        e1 = new Employee(2,"Sam");
+
+        m1.put(e1, e1.slno +", "+ e1.name);
+
         m2.put(e2, e2.slno +", "+ e2.name);
 
         System.out.println("Value in Map 1 : " + m1.values());

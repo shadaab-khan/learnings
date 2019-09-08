@@ -9,10 +9,11 @@ public class ImplRunnable extends ExtendsThread implements Runnable {
     public static void main(String[] args) {
 
         ImplRunnable implRunnable = new ImplRunnable();
-        implRunnable.test();
+//        implRunnable.test();
         Thread t = new Thread(implRunnable);
         t.start();
-        System.out.println("Inplementing Main Thread");
+        t.start();
+        System.out.println("Implementing Main Thread");
 
     }
 
