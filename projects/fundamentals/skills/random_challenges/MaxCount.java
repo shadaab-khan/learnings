@@ -1,30 +1,8 @@
+package random_challenges;
+
 import java.util.*;
 
 public class MaxCount {
-    /*
-    * My method
-    **/
-//    public static void main(String[] args) {
-//        String str;
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter the string : ");
-//        str = scanner.next();
-//        char[] letter = new char[str.length()];
-//        int occurence = 0;
-//        int count[];
-//        for (int i = 0; i < str.length(); i++) {
-//            letter[i] = str.charAt(i);
-//        }
-//        for (int i = 0; i < letter.length; i++) {
-//            for (int j = 0; j < str.length(); j++) {
-//                if (letter[i] == str.charAt(j)) {
-//                    occurence++;
-//                }
-//            }
-//            System.out.println(letter[i] + " occurs : " + occurence + "times");
-//        }
-//    }
-
     /*
     * Method 1
     * */
@@ -40,6 +18,7 @@ public static void main(String[] args) {
 
     //Count each word in given string and store in array freq
     for(i = 0; i < string.length; i++) {
+//     In order to count the current element set freq[i]=1
         freq[i] = 1;
         for(j = i+1; j < string.length; j++) {
             if(string[i] == string[j] && string[i] != ' ' && string[i] != '0') {
@@ -86,7 +65,7 @@ public static void main(String[] args) {
 //
 //
 //    public static void main(String[] args) {
-//        MaxCount test = new MaxCount();
+//        random_challenges.MaxCount test = new random_challenges.MaxCount();
 //        List<Character> result = test.maximumOccurringChars(TEST_CASE_1, true);
 //        System.out.println(result);
 //    }
