@@ -6,29 +6,28 @@ public class RepeatedString {
 
     private static long repeatedString(String s, long n) {
 
-        char[] ch = s.toCharArray();
-        StringBuilder newStr = new StringBuilder();
         long count=0;
-        int k =0;
-        for(int j=0;j<n;j++){
-            if(k>s.length()-1) {
-                k=0;
-            }
-            newStr.append(ch[k]);
-                k++;
-            if(newStr.charAt(j)=='a'){
+        for(char c : s.toCharArray())
+            if(c == 'a')
                 count++;
-            }
-        }
+
+        long factor = (n/s.length());
+        long rem = (n%s.length());
+        count =  factor*count  ;
+        for(int i=0;i<rem;i++)
+            if(s.charAt(i)=='a')
+                count++;
+        System.out.println(count);
         return count;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
-        String s = "a";//scanner.nextLine();
+        String s = "aba";//scanner.nextLine();
 
-        long n = 1000000000000L;//scanner.nextLong();
+//        long n = 1000000000000L;
+        long n = 12;
 
         long result = repeatedString(s, n);
 
