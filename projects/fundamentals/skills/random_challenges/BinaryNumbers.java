@@ -25,7 +25,7 @@ public class BinaryNumbers {
 //
 //        System.out.println(t);
 
-        String bin[] = Integer.toBinaryString(n).split("0+");
+        String[] bin = Integer.toBinaryString(n).split("0+");
         Arrays.sort(bin);
         System.out.println(bin[bin.length-1].length());
     }

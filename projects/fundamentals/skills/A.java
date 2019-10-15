@@ -35,12 +35,16 @@ class Main {
 //            System.out.println("ClassNotFoundException Exception");
 //            cnfe.printStackTrace();
         } catch (Test i){
-            System.out.println("Caught Exception : " + i);
+            System.out.println("Caught Exception : " + i.getMessage());
         }catch (Exception e){
             System.out.println("General Exception");
             throw e;
         }
     }
 
-    static class Test extends Exception{}
+    static class Test extends Exception{
+        Test() {
+            System.out.println("Custom Exception");
+        }
+    }
 }
