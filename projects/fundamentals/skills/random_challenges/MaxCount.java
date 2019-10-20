@@ -65,7 +65,7 @@ public class MaxCount {
 
 
     public static void main(String[] args) {
-        random_challenges.MaxCount test = new random_challenges.MaxCount();
+        MaxCount test = new MaxCount();
 //        To remove all special chars
 //        TEST_CASE_1 = TEST_CASE_1.replaceAll("[^a-zA-Z0-9]", "");
         List<Character> result = test.maximumOccurringChars(TEST_CASE_1, true);
@@ -73,7 +73,7 @@ public class MaxCount {
     }
 
 
-    public List<Character> maximumOccurringChars(String str) {
+    protected List<Character> maximumOccurringChars(String str) {
         return maximumOccurringChars(str, false);
     }
 

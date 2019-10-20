@@ -73,7 +73,13 @@ public class TestCodes {
         int n=3, result;
         result = fact(n);
         System.out.println(result);
-    }
+
+        final int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {10, 20, 30, 40, 50};
+        arr2 = arr1;
+//        arr1 = arr2; // cannot assign non-final array obj reference to final
+        for (int value : arr2) System.out.println(value);
+}
 
     private static int fact(int n) {
         if (n == 1)
