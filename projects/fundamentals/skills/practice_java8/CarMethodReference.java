@@ -1,6 +1,7 @@
 package practice_java8;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -21,7 +22,7 @@ public class CarMethodReference {
     public static void main(String[] args) {
 
         final CarMethodReference carMethodReference = CarMethodReference.create( CarMethodReference::new );
-        final List<CarMethodReference> carMethodReferences = Arrays.asList(carMethodReference);
+        final List<CarMethodReference> carMethodReferences = Collections.singletonList(carMethodReference);
 
         carMethodReferences.forEach( CarMethodReference::collide );
         carMethodReferences.forEach( CarMethodReference::repair );

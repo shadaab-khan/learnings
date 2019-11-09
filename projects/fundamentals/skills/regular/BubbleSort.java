@@ -1,9 +1,10 @@
+package regular;
 
 import java.util.Scanner;
 
 public class BubbleSort {
 
-    void bubblesrt(int[] arr){
+    public void bubblesrt(int[] arr){
         int i, j;
         int temp;
         for (i = 0; i < arr.length-1; i++) {
@@ -40,5 +41,21 @@ public class BubbleSort {
         bubbleSort.bubblesrt(arr);
         System.out.println("Sorted Array is :");
         bubbleSort.printArray(arr);
+    }
+
+    public int bubblesrt(int[] a, int count) {
+        int i, j;
+        int temp;
+        for (i = 0; i < a.length-1; i++) {
+            for (j = i+1; j < a.length; j++) {
+                if(a[j]<a[i]){
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
